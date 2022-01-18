@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<style>
+.chess-board {  border-spacing: 0; 
+               border-collapse: collapse;}
+
+.chess-board th { padding: 10px; }
+
+.chess-board td { border: 3px solid; width: 5em; height: 5em; background-color: limegreen;}
+
+.chess-board td:hover { background-color: yellow;}
+
+div {
+  padding-left: 8px;
+}
+
+</style>
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+<script>
+    var gPlayer = 1;
+    // Put piece white or black piece according on whose turn.
+    $(document).ready(function(){
+        $("#position td").click(function() {
+            var column_num = parseInt( $(this).index() );
+            var row_num = parseInt( $(this).parent().index() );
+            var nBox = 8 * (row_num-1) + column_num;
+            var div_id = "#div" + nBox.toString();
+            // Put piece only when the cell is empty.
+            if (this.disabled != true){
+              if (gPlayer == 1)
+                $(div_id).prepend("<img src='../../static/app_othello/images/PieceBlack.png'/>");
+              else
+                $(div_id).prepend("<img src='../../static/app_othello/images/PieceWhite.png'/>");
+              gPlayer = -gPlayer;
+              this.disabled = true;
+            }
+        });
+    });
+</script>
+
+ 
+</script>
+</head>
+<body>
+<table class="chess-board" id="position">
+    <tbody>
+        <tr>
+            <th></th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>
+              <div id="div1"> </div>
+            </td>
+            <td>
+              <div id="div2"> </div>
+            </td>
+            <td>
+              <div id="div3"> </div>
+            </td>
+            <td>
+              <div id="div4"> </div>
+            </td>
+            <td>
+              <div id="div5"> </div>
+            </td>
+            <td>
+              <div id="div6"> </div>
+            </td>
+            <td>
+              <div id="div7"> </div>
+            </td>
+            <td>
+              <div id="div8"> </div>
+            </td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>
+              <div id="div9"> </div>
+            </td>
+            <td>
+              <div id="div10"> </div>
+            </td>
+            <td>
+              <div id="div11"> </div>
+            </td>
+            <td>
+              <div id="div12"> </div>
+            </td>
+            <td>
+              <div id="div13"> </div>
+            </td>
+            <td>
+              <div id="div14"> </div>
+            </td>
+            <td>
+              <div id="div15"> </div>
+            </td>
+            <td>
+              <div id="div16"> </div>
+            </td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td>
+              <div id="div17"> </div>
+            </td>
+            <td>
+              <div id="div18"> </div>
+            </td>
+            <td>
+              <div id="div19"> </div>
+            </td>
+            <td>
+              <div id="div20"> </div>
+            </td>
+            <td>
+              <div id="div21"> </div>
+            </td>
+            <td>
+              <div id="div22"> </div>
+            </td>
+            <td>
+              <div id="div23"> </div>
+            </td>
+            <td>
+              <div id="div24"> </div>
+            </td>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td>
+              <div id="div25"> </div>
+            </td>
+            <td>
+              <div id="div26"> </div>
+            </td>
+            <td>
+              <div id="div27"> </div>
+            </td>
+            <td>
+              <div id="div28"> </div>
+            </td>
+            <td>
+              <div id="div29"> </div>
+            </td>
+            <td>
+              <div id="div30"> </div>
+            </td>
+            <td>
+              <div id="div31"> </div>
+            </td>
+            <td>
+              <div id="div32"> </div>
+            </td>
+        </tr>
+        <tr>
+            <th>5</th>
+            <td>
+              <div id="div33"> </div>
+            </td>
+            <td>
+              <div id="div34"> </div>
+            </td>
+            <td>
+              <div id="div35"> </div>
+            </td>
+            <td>
+              <div id="div36"> </div>
+            </td>
+            <td>
+              <div id="div37"> </div>
+            </td>
+            <td>
+              <div id="div38"> </div>
+            </td>
+            <td>
+              <div id="div39"> </div>
+            </td>
+            <td>
+              <div id="div40"> </div>
+            </td>
+        </tr>
+        <tr>
+            <th>6</th>
+            <td>
+              <div id="div41"> </div>
+            </td>
+            <td>
+              <div id="div42"> </div>
+            </td>
+            <td>
+              <div id="div43"> </div>
+            </td>
+            <td>
+              <div id="div44"> </div>
+            </td>
+            <td>
+              <div id="div45"> </div>
+            </td>
+            <td>
+              <div id="div46"> </div>
+            </td>
+            <td>
+              <div id="div47"> </div>
+            </td>
+            <td>
+              <div id="div48"> </div>
+            </td>
+        </tr>
+        <tr>
+            <th>7</th>
+            <td>
+              <div id="div49"> </div>
+            </td>
+            <td>
+              <div id="div50"> </div>
+            </td>
+            <td>
+              <div id="div51"> </div>
+            </td>
+            <td>
+              <div id="div52"> </div>
+            </td>
+            <td>
+              <div id="div53"> </div>
+            </td>
+            <td>
+              <div id="div54"> </div>
+            </td>
+            <td>
+              <div id="div55"> </div>
+            </td>
+            <td>
+              <div id="div56"> </div>
+            </td>
+        </tr>
+        <tr>
+            <th>8</th>
+            <td>
+              <div id="div57"> </div>
+            </td>
+            <td>
+              <div id="div58"> </div>
+            </td>
+            <td>
+              <div id="div59"> </div>
+            </td>
+            <td>
+              <div id="div60"> </div>
+            </td>
+            <td>
+              <div id="div61"> </div>
+            </td>
+            <td>
+              <div id="div62"> </div>
+            </td>
+            <td>
+              <div id="div63"> </div>
+            </td>
+            <td>
+              <div id="div64"> </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

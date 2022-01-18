@@ -1,0 +1,1 @@
+// Load the piece image when the table cell is clicked (onclick event).
